@@ -1,0 +1,13 @@
+#logo img {
+    margin-top: -80px;
+    width: 130px;
+    height: 100px;
+    float: right ;
+}
+
+.container {
+    background: url(./images/ocean.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
