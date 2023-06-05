@@ -1,11 +1,13 @@
 #clockContainer
 {
   position: relative;
-  margin: auto; 
-  height:10vw;
-  width:10vw; 
+  margin: auto;
+  height:20vw;
+  width:20vw;
   background: url(clock.gif) no-repeat;
   background-size: 100%;
+  float:right;
+  border-radius: 50%;
 }
 
 #hour, #minute, #second
