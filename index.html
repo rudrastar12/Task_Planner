@@ -16,14 +16,15 @@
 <body>
     <body class="bg-success p-2 text-dark bg-opacity-10"></body>
     <div class="container">
-        <h2>Task Planner App</h2>
+        <div id="date"></div>
+        <h2>Task Planner App</h2> 
         <form id="task-form">
             <div id="clockContainer">
                 <div id="hour"></div>
                 <div id="minute"></div>
                 <div id="second"></div>
             </div>
-            <div id="date"></div>
+            
             <div>
                 <label for="task-name">Task Name:</label>
                 <input type="text" id="task-name" placeholder="Enter Task Name" required>
@@ -67,6 +68,7 @@
             <tbody id="task-list" class="table-success"></tbody>
             <tbody id="task-list" class="table-secondary"></tbody>
         </table>
+        
     </div>
 
     <script src="taskPlannerscript.js"></script>
