@@ -1,87 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US" data-theme="dark:dark light:light" data-color-mode="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Planner</title>
-    <link rel="stylesheet" href="clockStyles.css">
-    <link rel="stylesheet" href="taskPlannerstyle.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
         integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+
+    <title>Task Planner</title>
+    <link href="clockstyle.css" type="text/css" rel="stylesheet">
+    <link href="style.css" type="text/css" rel="stylesheet">
+
 </head>
 
 <body>
-    <body class="bg-success p-2 text-dark bg-opacity-10"></body>
-    <div class="container">
-        <div id="date"></div>
-        <h2>Task Planner App</h2> 
-        <form id="task-form">
-            <div id="clockContainer">
-                <div id="hour"></div>
-                <div id="minute"></div>
-                <div id="second"></div>
+    <!--navigation bar-->
+    <div id="nav">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" id="head" href="#">Task Planner</a>
+                <div id="date">date</div>
+                <span class="nav justify-content-center">
+                    <div id="clockContainer">
+                        <div id="hour"></div>
+                        <div id="minute"></div>
+                        <div id="second"></div>
+                    </div>
+                </span>
             </div>
-            
-            <div>
-                <label for="task-name">Task Name:</label>
-                <input type="text" id="task-name" placeholder="Enter Task Name" required>
-            </div><br>
-            <div>
-                <label for="task-description">Task Description:</label>
-                <textarea id="task-description" placeholder="Enter Task Description"></textarea>
-            </div><br>
-            <div>
-                <label for="assigned-to">Assigned To:</label>
-                <input type="text" id="assigned-to" placeholder="Enter Assigned To">
-            </div><br>
-            <div>
-                <label for="due-date">Due Date:</label>
-                <input type="date" id="due-date">
-            </div><br>
-            <div>
-                <label for="status">Status:</label>
-                <select id="status">
-                    <option value="todo">To Do</option>
-                    <option value="in-progress">In Progress</option>
-                    <option value="review">Review</option>
-                    <option value="done">Done</option>
-                </select>
-            </div><br>
-            <div>
-                <button type="submit" id="add-task-btn" class="btn btn-secondary">Add Task</button>
-            </div>
-        </form><br>
-        <table id="task-table" class="table table-dark">
-            <thead>
-                <tr>
-                    <th>Task Name</th>
-                    <th>Description</th>
-                    <th>Assigned To</th>
-                    <th>Due Date</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody id="task-list" class="table-success"></tbody>
-            <tbody id="task-list" class="table-secondary"></tbody>
-        </table>
-        
     </div>
 
-    <script src="taskPlannerscript.js"></script>
-    <script src="clockScript.js"></script>
-    <script src="currentDate.js"></script>
+    </nav>
+    </div>
+    <div id="main">
+        <div id="left">
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            <form id="task-form">
+                <div>
+                    <label for="task-name">Task Name:</label>
+                    <input type="text" id="task-name" placeholder="Enter Task Name" required>
+                </div><br>
+                <div>
+                    <label for="task-description">Task Description:</label>
+                    <textarea id="task-description" placeholder="Enter Task Description"></textarea>
+                </div><br>
+                <div>
+                    <label for="assigned-to">Assigned To:</label>
+                    <input type="text" id="assigned-to" placeholder="Enter Assigned To">
+                </div><br>
+                <div>
+                    <label for="due-date">Due Date:</label>
+                    <input type="date" id="due-date">
+                </div><br>
+                <div>
+                    <label for="status">Status:</label>
+                    <select id="status">
+                        <option value="todo">To Do</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="review">Review</option>
+                        <option value="done">Done</option>
+                    </select>
+                </div><br>
+                <div>
+                    <button type="submit" id="add-task-btn" class="btn btn-dark">Add Task</button>
+                </div>
+            </form><br>
+
+
+        </div>
+        <div id="right">
+
+            <table id="task-table" class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>Task Name</th>
+                        <th>Description</th>
+                        <th>Assigned To</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="task-list" class="table-success"></tbody>
+            </table>
+        </div>
+
+    </div>
+    <div id="footer" class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+        Created by Manpreet, Rudra & Rashmi;
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
-        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="date.js"></script>
+    <script src="clock.js"></script>
 </body>
 
 </html>
-

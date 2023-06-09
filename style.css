@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: scroll;
+}
+
+#head {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+#nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url('./images/nav.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+}
+
+#main {
+  display: flex;
+  padding: 20px;
+}
+
+#left {
+  flex: 0 0 30%;
+  height: 70vh;
+  background-image: url('./images/left.jpeg');
+  padding: 20px;
+}
+
+#right {
+  flex: 0 0 70%;
+  background-image: url('./images/right.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px;
+}
+
+.container {
+  max-width: 200px;
+  margin: 12px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #f0ad4e;
+  color: #fff;
+  border: none;
+}
+
+.delete-button {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+}
+
+
+#footer {
+  color: white;
+  padding: 10px;
+}
+
+#clockContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 1080px;
+  margin-right: auto; 
+}
+
+div#date {
+  margin-left: 1000px;
+  font-size: 25px;
+  color: #101011;
+  margin-right: auto;
+}
